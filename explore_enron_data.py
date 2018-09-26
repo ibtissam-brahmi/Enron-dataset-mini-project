@@ -16,7 +16,14 @@
 """
 
 import pickle
-
+#import the dataset
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+#get how many many data points our dataset have
 print "The Enron dataset contains",len(enron_data), "people"
+
+#convert the dictionary to a dataframe
+import pandas as pd
+df = pd.DataFrame(enron_data)
+print df.head()
+print df.shape
