@@ -27,3 +27,11 @@ import pandas as pd
 df = pd.DataFrame(enron_data)
 print df.head()
 print df.shape
+
+def poi():
+    nbr=0
+    for person in enron_data.keys():
+        if enron_data[person]['poi'] == 1:
+            nbr = nbr+1
+    return nbr
+print "there are", poi(), "person of interest"
